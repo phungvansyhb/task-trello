@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- icon -->
+
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/ruang-admin.css" rel="stylesheet">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <div id="wrapper">
+            <!-- sidebar -->
+            <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+                <a
+                    to="/"
+                    class="sidebar-brand d-flex align-items-center justify-content-center">
+                    <div class="sidebar-brand-icon">
+                        <img src="assets/img/logo.jpg" alt="anh"/>
+                    </div>
+                    <div class="sidebar-brand-text mx-3">BLogIotAdmin</div>
+                </a>
+                <hr class="sidebar-divider my-0"/>
+                <hr class="sidebar-divider"/>
+                <li class="nav-item">
+                    <a href="/khoa-hoc" class="nav-link">
+                        <i class="fa fa-fw fa-wpforms"></i>
+                        <span>Khóa học</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/bai-viet" class="nav-link">
+                        <i class="fa fa-fw fa-wpforms"></i>
+                        <span>Bài viết</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/project" class="nav-link">
+                        <i class="fa fa-fw fa-wpforms"></i>
+                        <span>Project</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/video" class="nav-link">
+                        <i class="fa fa-fw fa-wpforms"></i>
+                        <span>Video</span>
+                    </a>
+                </li>
+                <hr class="sidebar-divider"/>
+            </ul>
+            <!-- end sidebar-->
+            <div id="content-wrapper" class="d-flex flex-column">
+                <div id="content">
+                    <!-- header -->
+                    <div>
+                        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+                            <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <ul class="navbar-nav ml-auto">
+
+                                <div class="topbar-divider d-none d-sm-block"></div>
+
+                                <li class="nav-item dropdown no-arrow">
+                                    <a
+                                        class="nav-link dropdown-toggle"
+                                        href="-"
+                                        id="userDropdown"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">
+                                        <img
+                                            class="img-profile rounded-circle"
+                                            src="assets/img/logo.jpg"
+                                            style="max-width: 60px">
+                                        <span class="ml-2 d-none d-lg-inline text-white small">Admin</span>
+                                    </a>
+                                    <div
+                                        class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                        aria-labelledby="userDropdown">
+                                        <a class="dropdown-item" href="-">
+                                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            Profile
+                                        </a>
+                                        <a class="dropdown-item" href="-">
+                                            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            Settings
+                                        </a>
+                                        <a class="dropdown-item" href="-">
+                                            <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            Activity Log
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="login.html">
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            Logout
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- end header-->
+
+                    <!-- content -->
+                    <div class="col " id="formEdit">
+                        <div class="card mb-4">
+                            <div
+                                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Form edit khoa hoc</h6>
+                            </div>
+                            <div class="card-body">
+                                <form name="form">
+                                    <div class="form-group">
+                                        <label htmlfor="exampleFormControlInput1">Tên khóa học</label>
+                                        <input
+                                            required="required"
+                                            name="tenkhoahoc"
+                                            class="form-control"
+                                            id="FormInput1"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label htmlfor="exampleFormControlSelect1">Thể loại</label>
+                                        <select class="form-control" id="FormSelect" name="theloai">
+                                            <option >---</option>
+                                            <option >lập trình c</option>
+                                            <option>web-co-ban</option>
+                                            <option>ardruino</option>
+                                            <option>proteus</option>
+                                            <option>altium</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label htmlfor="exampleFormControlTextarea1">Mục tiêu khóa học</label>
+                                        <textarea
+                                            name="muctieu"
+                                            required="required"
+                                            class="form-control"
+                                            id="FormInput3"
+                                            rows={5}></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label htmlfor="exampleFormControlInput1">Giá</label>
+                                        <input name="gia" required="required" class="form-control" id="FormInput4"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label htmlfor="exampleFormControlInput1">Giảng Viên</label>
+                                        <input
+                                            required="required"
+                                            name="giangvien"
+                                            class="form-control"
+                                            id="FormInput5"/>
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="btn btn-info">Xác nhận
+                                        </button>
+                                        <button type="button" class="btn btn-warning" onclick="ClearForm()">
+                                            Xóa hết
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end content-->
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.easing.min.js"></script>
+        <script src="assets/js/ruang-admin.js"></script>
+        <script>
+            function ClearForm() {
+                document
+                    .getElementById('FormInput1')
+                    .value = null;
+
+                document
+                    .getElementById('FormInput3')
+                    .value = null;
+                document
+                    .getElementById('FormInput4')
+                    .value = null;
+                document
+                    .getElementById('FormInput5')
+                    .value = null;
+            }
+        </script>
+    </body>
+</html>
